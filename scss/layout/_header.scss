@@ -1,0 +1,89 @@
+@use "../global" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s;
+  &-wrap {
+    position: relative;
+    @include flex;
+    padding: 1% 2%;
+    @include mq(tab) {
+      padding: 2% 3%;
+    }
+    &__logo {
+      width: 15%;
+      @include mq(tab) {
+        width: 40%;
+      }
+      a {
+        width: 100%;
+        h1 {
+        font-size: 1.5rem;
+        margin-right: 3%;
+        font-weight: 400;
+      }
+      }
+    }
+    &__nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 45%;
+      @include mq(tab) {
+        position: static;
+        transform: none
+      }
+      &__list {
+        @include flex(center);
+        gap: 30px;
+        &__item {
+          a {
+            font-size: 0.9rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    &__right {
+      @include flex(flex-end);
+      @include mq(tab) {
+        width: 60%;
+      }
+      &__cta {
+      @include mq(tab) {
+        margin-right: 5%;
+      }
+      a {
+        color: $cWhite;
+        font-weight: 700;
+        display: block;
+        background-color: $cDark_Navy;
+        border: solid 1px $cDark_Navy;
+        width: 12rem;
+        height: 45px;
+        @include flex(center);
+        border-radius: 50px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        @include mq(tab) {
+          width: 10rem;
+          height: 32px;
+        }
+        &:hover {
+          background-color: $cWhite;
+          color: $cDark_Navy;
+          opacity: 1;
+        }
+      }
+    }
+    }
+  }
+&.change-color {
+  background-color: $cWhite;
+}
+}
+
+
+

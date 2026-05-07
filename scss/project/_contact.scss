@@ -1,0 +1,99 @@
+@use "../global" as *;
+
+.con {
+  &-wrap {
+    &.__inner {
+      width: 65%;
+      @include mq(tab) {
+        width: 80%;
+      }
+    }
+    &__txt {
+      text-align: center;
+      margin-bottom: 7%;
+      p {
+        font-weight: 400;
+      }
+    }
+    &__body {
+      &__form {
+        &__block {
+          @include flex;
+          margin-bottom: 5%;
+          @include mq(tab) {
+            display: block;
+            margin-bottom: 7%;
+          }
+          &:nth-last-of-type(1) {
+            margin-bottom: 0;
+          }
+          &__left {
+            width: 40%;
+            @include flex;
+            @include mq(tab) {
+              margin-bottom: 3.5%;
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+            }
+            p {
+              font-size: 1.05rem;
+              @include mq(tab) {
+                margin-right: 7%;
+              }
+            }
+            span {
+              font-size: 0.75rem;
+              border: solid 1px $cRed;
+              border-radius: 50px;
+              color: $cRed;
+              padding: 0.5% 3%;
+            }
+            .opti {
+              color: $cGray;
+              border: solid 1px $cGray;
+            }
+          }
+          input {
+            width: 50%;
+            height: 2.75rem;
+            @include mq(tab) {
+              width: 100%;
+            }
+          }
+          textarea {
+            width: 50%;
+            height: 17.5rem;
+            @include mq(tab) {
+              width: 100%;
+            }
+          }
+          &.__con {
+            align-items: baseline;
+          }
+        }
+        &__btn {
+          text-align: center;
+          margin-top: 7%;
+          button {
+            background: $cDark_Navy;
+            border: solid 1px $cDark_Navy;
+            color: $cWhite;
+            cursor: pointer;
+            border-radius: 50px;
+            width: 19.5rem;
+            height: 60px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: all 0.4s;
+            &:hover {
+              color: $cDark_Navy;
+              border: solid 1px $cDark_Navy;
+              background-color: $cWhite;
+            }
+          }
+        }
+      }
+    }
+  }
+}

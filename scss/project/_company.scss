@@ -1,0 +1,157 @@
+@use "../global" as *;
+
+.mes {
+  &-wrap {
+    display: flex;
+    position: relative;
+    @include mq(tab) {
+      display: block;
+    }
+    &.__inner {
+      width: 100%;
+      padding-bottom: 13.5%;
+      @include mq(tab) {
+        width: 90%;
+        margin-bottom: 300px;
+      }
+      @include mq(sp) {
+        margin-bottom: 350px;
+      }
+    }
+    &__img {
+      width: 47.5%;
+      aspect-ratio: 3 / 4;
+      @include mq(pc) {
+        width: 60%;
+      }
+      @include mq(tab) {
+        width: 100%;
+      }
+      img {
+        @include img;
+        object-position: center;
+        @include mq(pc) {
+          object-position: 100% center;
+        }
+      }
+    }
+    &__con {
+      position: absolute;
+      width: 60%;
+      bottom: 5%;
+      right: 0;
+      background-color: $cBlue_Gray;
+      border-radius: 30px;
+      padding: 5%;
+      @include mq(pc) {
+        bottom: 2%;
+        width: 55%;
+      }
+      @include mq(tab) {
+        bottom: -250px;
+        width: 100%;
+        padding: 7% 5%;
+      }
+      @include mq(sp) {
+        bottom: -320px;
+        width: 100%;
+      }
+      &__copy {
+        margin-bottom: 5%;
+        font-size: 1.8rem;
+        font-size: 700;
+      }
+      &__txt {
+        margin-bottom: 5%;
+        font-weight: 400;
+      }
+      &__name {
+        font-size: 1.55rem;
+        span {
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-right: 5%;
+        }
+      }
+    }
+  }
+}
+
+.out {
+  &-wrap {
+    &.__inner {
+      padding-top: 0;
+    }
+    &__body {
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: solid 1px $cLight_Gray;
+        padding: 2% 0 2% 1%;
+        &:nth-last-of-type(1) {
+          align-items: baseline;
+        }
+      }
+      dl {
+        dt {
+          width: 30%;
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+        dd {
+          width: 65%;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.acc {
+  &-wrap {
+    &.__inner {
+      padding-top: 0;
+      padding-bottom: 13.5%;
+      width: 100%;
+      @include mq(tab) {
+        padding-bottom: 17.5%;
+      }
+    }
+    &__ttl {
+      margin-left: 7.5%;
+    }
+    &__body {
+      position: relative;
+      &__map {
+        width: 100%;
+        height: 500px;
+        @include mq(tab) {
+          height: 350px;
+        }
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__add {
+        position: absolute;
+        content: "";
+        bottom: -10%;
+        background-color: $cGray;
+        border-radius: 0px 20px 20px 0px;
+        padding: 1.5% 7.5% 1.5% 5%;
+        &__ttl {
+          color: $cWhite;
+          font-size: 1.2rem;
+          margin-bottom: 4.5%;
+        }
+        &__txt {
+          color: $cWhite;
+          line-height: 1.5;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

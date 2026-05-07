@@ -1,0 +1,128 @@
+@use "../global" as *;
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  @include mq(tab) {
+    font-size: 90%;
+  }
+  @include mq(sp) {
+    font-size: 80%;
+  }
+}
+
+body {
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-break: break-all;
+  background-color: $cWhite;
+  color: $cDark_Navy;
+  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $cBlack;
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+.__inner {
+  width: 85%;
+  margin: 0 auto;
+  padding: 9% 0;
+}
+
+.pc {
+  display: none;
+  @include mq(pc) {
+    display: block;
+  }
+}
+
+.tab {
+  display: none;
+  @include mq(tab) {
+    display: block;
+  }
+}
+
+.btn {
+      position: relative;
+      background-color: $cDark_Navy;
+      width: 19.5rem;
+      height: 60px;
+      margin: 0 auto;
+      border-radius: 50px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease;
+      will-change: transform;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      @include mq(tab) {
+        height: 50px;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: $cWhite;
+        @include flex(center);
+        margin: 0 auto;
+        font-weight: 700;
+        &:hover {
+          opacity: 1;
+        }
+        span {
+          position: absolute;
+          right: 14px;
+          background-color: $cWhite;
+          color: $cDark_Navy;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          @include mq(tab) {
+            width: 35px;
+            height: 35px
+          }
+          @include flex(center);
+          font-weight: 700;
+        }
+      }
+    }
+
+.ttl {
+  font-size: clamp(3rem, 2.527rem + 2.36vw, 4.3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 7%;
+  span {
+    display: block;
+    font-size: 1.125rem;
+    color: $cGray;
+    font-weight: 500;
+  }
+}
+

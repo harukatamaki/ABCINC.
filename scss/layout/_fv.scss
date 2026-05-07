@@ -1,0 +1,71 @@
+@use "../global" as *;
+
+.top {
+  background: url("../img/fv-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  &-wrap {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    @include mq(tab) {
+      width: 80%;
+    }
+    &__ttl {
+      margin-bottom: 5%;
+      h2 {
+        font-size: 5.6rem;
+        font-weight: 900;
+        margin-bottom: 2.5%;
+        @include mq(pc) {
+          margin-bottom: 7%;
+        }
+      }
+      p {
+        font-size: 2.5rem;
+        font-weight: 700;
+        @include mq(pc) {
+          margin-bottom: 12.5%;
+        }
+      }
+    }
+  }
+}
+
+.top {
+  &.sub {
+    position: relative;
+    height: 70vh;
+    @include mq(pc) {
+      height: 55vh;
+    }
+    @include mq(tab) {
+      height: 35vh;
+    }
+  }
+  &-wrap {
+      &__ttl {
+        line-height: 1.2;
+        h2 {
+          font-size: clamp(4.2rem, 3.909rem + 1.45vw, 5rem);
+          span {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $cGray;
+          }
+        }
+      }
+    }
+}
+
+.works-details {
+  .top {
+    background: none;
+    height: 100vh;
+  }
+}

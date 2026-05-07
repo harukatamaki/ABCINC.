@@ -1,0 +1,54 @@
+@use "../global" as *;
+
+.news_detail {
+  &-wrap {
+    &__ttl {
+      border-bottom: solid 1px $cLight_Gray;
+      padding-bottom: 2%;
+      &__meta {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.5%;
+        &__date {
+          font-size: 0.9rem;
+          font-weight: 400;
+          margin-right: 3%;
+        }
+        &__cate {
+          font-weight: 400;
+          margin-right: 2%;
+          background-color: $cMedium_Gray;
+          padding: 0.25% 2.5%;
+          border-radius: 50px;
+          color: $cWhite;
+          font-weight: 400;
+          font-size: 0.9rem;
+        }
+      }
+      &__head {
+        h2 {
+          font-weight: 700;
+          font-size: 2.15rem;
+        }
+      }
+    }
+    &__body {
+      &__txt {
+        margin-top: 5%;
+        margin-bottom: 7%;
+        p {
+          font-weight: 400;
+        }
+      }
+      &__btn {
+        margin-bottom: 7%;
+        a {
+          font-weight: 700;
+          font-size: 1.25rem;
+          border-bottom: solid 1px $cDark_Navy;
+          padding-bottom: 1%;
+        }
+      }
+    }
+  }
+}
