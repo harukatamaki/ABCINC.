@@ -1,14 +1,15 @@
 $(function () {
   $('.slider').slick({
-  autoplaySpeed: 3600,
-  speed: 3500,
-  cssEase: 'linear',
+  autoplaySpeed: 3500,
+  speed: 1200,
+  cssEase: 'ease-in-out',
   autoplay: true,
   infinite: true,
-  waitForAnimate: false,
-  cssEase: 'linear',
+  waitForAnimate: true,
   slidesToShow: 4,
   slidesToScroll: 1,
+  pauseOnHover: false,
+  pauseOnFocus: false,
   prevArrow: '<div class="slick-prev"><</div>',
   nextArrow: '<div class="slick-next">></div>',
   responsive: [
